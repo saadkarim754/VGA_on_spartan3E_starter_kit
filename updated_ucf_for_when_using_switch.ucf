@@ -1,0 +1,17 @@
+# Clock input (assuming 100 MHz clock on C9 pin)
+NET "clk" LOC = "C9" | IOSTANDARD = LVTTL;
+
+# VGA outputs (1-bit per color)
+NET "Red"   LOC = "H14" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST;
+NET "Green" LOC = "H15" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST;
+NET "Blue"  LOC = "G15" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST;
+
+# VGA sync signals
+NET "Hsync" LOC = "F15" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST;
+NET "Vsync" LOC = "F14" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST;
+
+# Switches for triangle movement
+NET "sw[0]" LOC = "L13" | IOSTANDARD = LVTTL | PULLUP;  # Left
+NET "sw[1]" LOC = "L14" | IOSTANDARD = LVTTL | PULLUP;  # Right
+NET "sw[2]" LOC = "H18" | IOSTANDARD = LVTTL | PULLUP;  # Up
+NET "sw[3]" LOC = "N17" | IOSTANDARD = LVTTL | PULLUP;  # Down
