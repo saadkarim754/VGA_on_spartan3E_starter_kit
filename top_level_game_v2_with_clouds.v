@@ -9,7 +9,6 @@ module top (
     output wire Green,
     output wire Blue
 );
-
   // VGA Timing Constants
   localparam H_SYNC_PULSE   = 96;
   localparam H_BACK_PORCH   = 48;
